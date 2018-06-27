@@ -1,0 +1,78 @@
+[
+  {
+    "title": "V.S. Code",
+    "site": "https://code.visualstudio.com/",
+    "img": "vscode.png",
+    "doc": "https://code.visualstudio.com/docs",
+    "course":
+      "https://www.youtube.com/watch?v=4q1tD39Mk_A&list=PLLnpHn493BHHkdpK8E37x_d5cOZBr4GlL",
+    "overview": "https://www.youtube.com/watch?v=OOG3xcUQY5k",
+    "isDeprecated": false
+  },
+  {
+    "title": "BEM",
+    "site": "http://getbem.com/",
+    "img": "bem.png",
+    "doc": "http://getbem.com/naming/",
+    "course":
+      "https://www.youtube.com/watch?v=lpxXHkZSl1Q&list=PLfdtiltiRHWEYqBpQVQRkGNe0ForwPDWL",
+    "overview": "https://www.youtube.com/watch?v=WH4U4K5W8N8",
+    "isDeprecated": false
+  },
+  {
+    "title": "Pug",
+    "site": "https://pugjs.org/api/getting-started.html",
+    "img": "pug.png",
+    "doc": "https://pugjs.org/language/attributes.html",
+    "course": "https://www.youtube.com/watch?v=leilVbK0xQc",
+    "overview": "https://www.youtube.com/watch?v=tOXszq1-rxs",
+    "isDeprecated": false
+  },
+  {
+    "title": "Sass",
+    "site": "https://sass-lang.com/",
+    "img": "sass.png",
+    "doc": "https://sass-lang.com/documentation/file.SASS_REFERENCE.html",
+    "course":
+      "https://www.youtube.com/watch?v=St5B7hnMLjg&list=PL4cUxeGkcC9iEwigam3gTjU_7IA3W2WZA",
+    "overview": "https://sass-lang.com/guide",
+    "isDeprecated": false
+  },
+  {
+    "title": "Javascript",
+    "site": "https://www.udemy.com/modern-javascript-from-the-beginning/",
+    "img": "javascript.png",
+    "doc": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
+    "course": "https://www.udemy.com/modern-javascript/",
+    "overview":
+      "https://www.udemy.com/es6-bootcamp-next-generation-javascript/",
+    "isDeprecated": false
+  },
+  {
+    "title": "Jquery",
+    "site": "http://youmightnotneedjquery.com/",
+    "img": "jquery.png",
+    "doc": "https://github.com/nefe/You-Dont-Need-jQuery",
+    "course": "https://www.youtube.com/watch?v=U_Z5FJbygJc",
+    "overview": "https://www.youtube.com/watch?v=WJ2PQe-pQJw",
+    "isDeprecated": true
+  },
+  {
+    "title": "Vue",
+    "site": "https://vuejs.org/",
+    "img": "vue.png",
+    "doc": "https://vuejs.org/v2/guide/",
+    "course": "https://www.udemy.com/vuejs-2-the-complete-guide/",
+    "overview": "https://www.youtube.com/watch?v=78tNYZUS-ps",
+    "isDeprecated": false
+  },
+  {
+    "title": "Webpack 4",
+    "site": "https://webpack.js.org/",
+    "img": "webpack.png",
+    "doc": "https://webpack.js.org/concepts/",
+    "course": "https://www.udemy.com/webpack-beyond-the-basics/",
+    "overview": "https://www.youtube.com/watch?v=jUTE7lmrS70",
+    "isDeprecated": false
+  }
+]
