@@ -1,5 +1,9 @@
 <template lang="pug">
-.bs-huge-stupid-content Huge Stupid Content for testing ScrollMagic + GSAP
+div
+  .bs-huge-stupid-content Huge Stupid Content for testing ScrollMagic + GSAP
+  .bs-huge-stupid-content__links
+    nuxt-link.bs-link(to="/") Home
+    nuxt-link.bs-link(to="/about") About
 </template>
 <script>
 export default {
@@ -33,11 +37,18 @@ export default {
 </script>
 <style lang="sass">
 .bs-huge-stupid-content
-  height: 800px
+  max-width: 1200px
   width: 100%
+  margin: 50vh auto
   background: $brand-primary
   color: white
   font-size: em(77)
   text-align: center
-  line-height: 266px
+  line-height: 100px
+  &__links
+    max-width: 800px
+    margin: 20px auto
+    display: flex
+    align-items: center
+    justify-content: space-between
 </style>

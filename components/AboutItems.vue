@@ -55,11 +55,11 @@ export default {
     font-size: 3em
     text-align: center
     flex: auto
-    margin-right: 100px
     @media only screen and (max-width: 992px)
-      margin-left: 20px
-      margin-right: 0
-      text-align: left
+      margin-left: 10px
+      margin-right: 10px
+    @media only screen and (max-width: 480px)
+      font-size: em(24)
   &__inner
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr

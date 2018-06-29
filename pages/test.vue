@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+div.bs-test
   axios-test
   scroll-magic-test
   .bs-spiderman
@@ -16,6 +16,8 @@ export default {
 };
 </script>
 <style lang="sass">
+.bs-test
+  min-height: 100vh
 .bs-spiderman
   background: url(~/images/spiderman.png) top center no-repeat
   position: fixed

@@ -9,7 +9,7 @@ module.exports = {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "Nuxt.js project" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico?v7" }]
   },
   /*
   ** Customize the progress bar color
@@ -28,7 +28,12 @@ module.exports = {
       })
       /* eslint-enable global-require */
     ],
-    vendor: ["axios", "vue-awesome-swiper", "swiper/dist/css/swiper.css"]
+    vendor: [
+      "axios",
+      "vue-awesome-swiper",
+      "swiper/dist/css/swiper.css",
+      "vue-spinner"
+    ]
   },
   modules: [
     ["nuxt-sass-resources-loader", "@/assets/sass/_variables.sass"],
@@ -38,6 +43,10 @@ module.exports = {
   plugins: [
     {
       src: "~/plugins/ksvuescrollmagic",
+      ssr: false
+    },
+    {
+      src: "~/plugins/awesomeSwiper",
       ssr: false
     },
     {
