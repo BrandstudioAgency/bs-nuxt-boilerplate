@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: "test",
+    title: "BS - Nuxt - Boilerplate",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -19,28 +19,29 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    /*
-    ** Run ESLint on save
-    */
-    // extend (config, { isDev, isClient }) {
-    //   if (isDev && isClient) {
-    //     config.module.rules.push({
-    //       enforce: 'pre',
-    //       test: /\.(js|vue)$/,
-    //       loader: 'eslint-loader',
-    //       exclude: /(node_modules)/
-    //     })
-    //   }
-    // }
-
-    vendor: ["axios"]
+    postCss: [
+      /* eslint-disable global-require */
+      require("autoprefixer")({
+        browsers: ["last 3 versions", "iOS >= 8", "Safari >= 8", "ie >= 9"],
+        cascade: false,
+        flexbox: "no-2009"
+      })
+      /* eslint-enable global-require */
+    ],
+    vendor: ["axios", "vue-awesome-swiper", "swiper/dist/css/swiper.css"]
   },
-  modules: [["nuxt-sass-resources-loader", "@/assets/sass/_variables.sass"]],
+  modules: [
+    ["nuxt-sass-resources-loader", "@/assets/sass/_variables.sass"],
+    "@nuxtjs/dotenv"
+  ],
   css: ["@/assets/sass/main.sass"],
   plugins: [
     {
       src: "~/plugins/ksvuescrollmagic",
       ssr: false
+    },
+    {
+      src: "~/plugins/axios"
     }
   ]
 };

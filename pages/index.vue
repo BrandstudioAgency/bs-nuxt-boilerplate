@@ -1,6 +1,5 @@
 <template lang="pug">
-div
-  boilerplate
+boilerplate
 </template>
 
 <script>

@@ -1,62 +1,40 @@
 <template lang="pug">
-  .bs-boilerplate__wrp
-    .bs-boilerplate(@mouseover="isHovered = true" @mouseleave="isHovered = false")
-      .bs-boilerplate__side(:class="{'bs-boilerplate__side--hovered': isHovered}")
-        a.bs-boilerplate__icon.bs-boilerplate__icon--gitbook(
-          href="https://brandstudio-az.gitbook.io/boilerplate/vs-code"
-          target="_blank"
-        )
-      .bs-boilerplate__inner
-        a(href="http://brandstudio.kz" target="_blank")
-          img.bs-boilerplate__img(src="images/merlin.png")
-        h1.bs-boilerplate__heading BrandStudio's boilerplate: v0.1.0
-        nuxt-link(to="/about" class="bs-link")
-          | About
-          i
-      .bs-boilerplate__side.bs-boilerplate__side--right(:class="{'bs-boilerplate__side--hovered': isHovered}")
-        a.bs-boilerplate__icon.bs-boilerplate__icon--github(
-          href="https://github.com/abzalzhumabaev/bs-nuxt-boilerplate"
-          target="_blank"
-        )
-    .bs-huge-stupid-content
-      p Lorem impsum dollar
-    .bs-huge-stupid-content.bs-huge-stupid-content--red
-      p Lorem impsum dollar
+.bs-boilerplate__wrp
+  .bs-boilerplate(@mouseover="isHovered = true" @mouseleave="isHovered = false")
+    .bs-boilerplate__side(:class="{'bs-boilerplate__side--hovered': isHovered}")
+      a.bs-boilerplate__icon.bs-boilerplate__icon--gitbook(
+        href="https://brandstudio-az.gitbook.io/boilerplate/vs-code"
+        target="_blank"
+      )
+    .bs-boilerplate__inner
+      a(href="http://brandstudio.kz" target="_blank")
+        img.bs-boilerplate__img(src="images/merlin.png")
+      h1.bs-boilerplate__heading BrandStudio's boilerplate: v0.1.0
+      nuxt-link(to="/about" class="bs-link")
+        | About
+        i
+    .bs-boilerplate__side.bs-boilerplate__side--right(:class="{'bs-boilerplate__side--hovered': isHovered}")
+      a.bs-boilerplate__icon.bs-boilerplate__icon--github(
+        href="https://github.com/abzalzhumabaev/bs-nuxt-boilerplate"
+        target="_blank"
+      )
 </template>
 <script>
+import axios from "axios";
+
 export default {
   mounted() {
-    this.$nextTick(this.scrollIt);
+    axios.get("users").then(response => {
+      this.users = response.data;
+    });
   },
   data() {
     return {
       isHovered: false
     };
-  },
-  methods: {
-    scrollIt() {
-      const scene = new this.$scrollmagic.Scene({
-        triggerElement: ".bs-huge-stupid-content",
-        triggerHook: 0.5,
-        duration: "100%"
-      }).setTween(
-        new this.$gsap.TweenMax.fromTo(
-          ".bs-huge-stupid-content",
-          0.2,
-          { opacity: 0, y: 150 },
-          { opacity: 1, y: -150 }
-        )
-      );
-      this.$ksvuescr.$emit("addScene", "scrollIt", scene);
-    }
-  },
-  destroyed() {
-    // Destroy ScrollMagic when our component is removed from DOM
-    this.$ksvuescr.$emit("destroy");
   }
 };
 </script>
-
 <style lang="sass">
 .bs-boilerplate
   position: relative
@@ -146,10 +124,4 @@ export default {
     opacity: 0.0
   100%
      left: 82%
-
-.bs-huge-stupid-content
-  height: 800px
-  background: tomato
-  &--red
-    background: red
 </style>
