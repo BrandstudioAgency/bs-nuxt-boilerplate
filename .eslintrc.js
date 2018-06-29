@@ -1,21 +1,69 @@
 module.exports = {
-  root: true,
-  env: {
-    browser: true,
-    node: true
+  "root": true,
+  "rules": {
+    "wrap-iife": 0,
+    "func-names": ["error", "never"],
+    "prettier/prettier": "error"
   },
-  parserOptions: {
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true,
+    "es6": true,
+  },
+  "parserOptions": {
     parser: 'babel-eslint'
   },
-  extends: [
-    // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
-    // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-    'plugin:vue/essential'
+  "extends": [
+    "airbnb-base",
+    "plugin:vue/essential",
+    "plugin:prettier/recommended"
   ],
   // required to lint *.vue files
-  plugins: [
+  "plugins": [
     'vue'
   ],
   // add your custom rules here
-  rules: {}
+  "rules": {
+    "wrap-iife": 0,
+    "func-names": ["error", "never"],
+    "prettier/prettier": "error"
+  },
+  "globals": {
+    "TimelineLite": false,
+    "TimelineMax": false,
+    "TweenLite": false,
+    "TweenMax": false,
+    "Back": false,
+    "Bounce": false,
+    "Circ": false,
+    "Cubic": false,
+    "Ease": false,
+    "EaseLookup": false,
+    "Elastic": false,
+    "Expo": false,
+    "Linear": false,
+    "Power0": false,
+    "Power1": false,
+    "Power2": false,
+    "Power3": false,
+    "Power4": false,
+    "Quad": false,
+    "Quart": false,
+    "Quint": false,
+    "RoughEase": false,
+    "Sine": false,
+    "SlowMo": false,
+    "SteppedEase": false,
+    "Strong": false,
+    "Draggable": false,
+    "SplitText": false,
+    "VelocityTracker": false,
+    "CSSPlugin": false,
+    "ThrowPropsPlugin": false,
+    "BezierPlugin": false,
+    "ScrollMagic": false,
+    "_": false,
+    "Vue": false
+  }
 }

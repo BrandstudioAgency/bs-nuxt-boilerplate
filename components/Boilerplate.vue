@@ -1,9 +1,9 @@
 <template lang="pug">
   .bs-boilerplate__wrp
-    .bs-boilerplate(@mouseover="sidesShow" @mouseleave="sidesHide")
-      .bs-boilerplate__side
+    .bs-boilerplate(@mouseover="isHovered = true" @mouseleave="isHovered = false")
+      .bs-boilerplate__side(:class="{'bs-boilerplate__side--hovered': isHovered}")
         a.bs-boilerplate__icon.bs-boilerplate__icon--gitbook(
-          href="https://brandstudio-az.gitbook.io/boilerplate/"
+          href="https://brandstudio-az.gitbook.io/boilerplate/vs-code"
           target="_blank"
         )
       .bs-boilerplate__inner
@@ -13,9 +13,9 @@
         nuxt-link(to="/about" class="bs-link")
           | About
           i
-      .bs-boilerplate__side.bs-boilerplate__side--right
+      .bs-boilerplate__side.bs-boilerplate__side--right(:class="{'bs-boilerplate__side--hovered': isHovered}")
         a.bs-boilerplate__icon.bs-boilerplate__icon--github(
-          href="https://github.com/abzalzhumabaev/bs-boilerplate"
+          href="https://github.com/abzalzhumabaev/bs-nuxt-boilerplate"
           target="_blank"
         )
 </template>
@@ -23,23 +23,10 @@
 export default {
   data() {
     return {
-      side: document.getElementsByClassName("bs-boilerplate__side"),
-      sideHovered: "bs-boilerplate__side--hovered",
-    }
-  },
-  methods: {
-    sidesShow() {
-      for (let i = 0; i < this.side.length; i += 1) {
-        this.side[i].classList.add(this.sideHovered);
-      }
-    },
-    sidesHide() {
-      for (let i = 0; i < this.side.length; i += 1) {
-        this.side[i].classList.remove(this.sideHovered);
-      }
-    }
+      isHovered: false
+    };
   }
-}
+};
 </script>
 
 <style lang="sass">

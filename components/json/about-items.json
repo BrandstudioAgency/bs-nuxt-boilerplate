@@ -67,12 +67,12 @@
     "isDeprecated": false
   },
   {
-    "title": "Webpack 4",
-    "site": "https://webpack.js.org/",
-    "img": "webpack.png",
-    "doc": "https://webpack.js.org/concepts/",
-    "course": "https://www.udemy.com/webpack-beyond-the-basics/",
-    "overview": "https://www.youtube.com/watch?v=jUTE7lmrS70",
+    "title": "Nuxt",
+    "site": "https://nuxtjs.org/",
+    "img": "nuxt.png",
+    "doc": "https://nuxtjs.org/guide",
+    "course": "https://www.udemy.com/nuxtjs-vuejs-on-steroids/",
+    "overview": "https://www.youtube.com/watch?v=nteDXuqBfn0",
     "isDeprecated": false
   }
 ]

@@ -20,6 +20,7 @@
 </template>
 <script>
 import json from "./json/about-items.json";
+
 export default {
   data() {
     return {
@@ -152,7 +153,7 @@ export default {
       content: ''
       background: #fff
       width: 100%
-      height: 100%
+      height: 105%
       left: 0
       top: 0
       transform: skew(-30deg)
@@ -180,4 +181,3 @@ export default {
       background: #35cc62
       color: #fff
 </style>
-
