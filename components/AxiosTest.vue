@@ -11,7 +11,7 @@ import axios from "axios";
 export default {
   mounted() {
     axios.get("5b3600631f72822c105ef657").then(response => {
-        this.users =   response.data;
+      this.users = response.data;
     });
   },
   data() {
