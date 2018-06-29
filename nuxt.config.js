@@ -36,5 +36,11 @@ module.exports = {
     vendor: ["axios"]
   },
   modules: [["nuxt-sass-resources-loader", "@/assets/sass/_variables.sass"]],
-  css: ["@/assets/sass/main.sass"]
+  css: ["@/assets/sass/main.sass"],
+  plugins: [
+    {
+      src: "~/plugins/ksvuescrollmagic",
+      ssr: false
+    }
+  ]
 };

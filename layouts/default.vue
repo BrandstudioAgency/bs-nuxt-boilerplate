@@ -20,4 +20,3 @@
   100%
     transform: translate3d(100%, 0, 0);
 </style>
-

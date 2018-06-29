@@ -1,15 +1,14 @@
 <template lang="pug">
 div
   boilerplate
-  hello
 </template>
 
 <script>
-import Boilerplate from '@/components/Boilerplate'
+import Boilerplate from "@/components/Boilerplate.vue";
 
 export default {
   components: {
-    Boilerplate,
+    Boilerplate
   }
-}
+};
 </script>

@@ -65,5 +65,12 @@ module.exports = {
     "ScrollMagic": false,
     "_": false,
     "Vue": false
+  },
+  settings: {
+    "import/resolver": {
+      "nuxt-import": {
+        extensions: [".mjs", ".js", ".vue", ".graphql", ".json"]
+      }
+    }
   }
 }

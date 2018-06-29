@@ -8,10 +8,11 @@
       about-items
 </template>
 <script>
-import AboutItems from "@/components/AboutItems"
+import AboutItems from "@/components/AboutItems.vue";
+
 export default {
   components: {
     AboutItems
   }
-}
+};
 </script>

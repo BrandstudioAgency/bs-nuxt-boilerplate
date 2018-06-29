@@ -18,13 +18,41 @@
           href="https://github.com/abzalzhumabaev/bs-nuxt-boilerplate"
           target="_blank"
         )
+    .bs-huge-stupid-content
+      p Lorem impsum dollar
+    .bs-huge-stupid-content.bs-huge-stupid-content--red
+      p Lorem impsum dollar
 </template>
 <script>
 export default {
+  mounted() {
+    this.$nextTick(this.scrollIt);
+  },
   data() {
     return {
       isHovered: false
     };
+  },
+  methods: {
+    scrollIt() {
+      const scene = new this.$scrollmagic.Scene({
+        triggerElement: ".bs-huge-stupid-content",
+        triggerHook: 0.5,
+        duration: "100%"
+      }).setTween(
+        new this.$gsap.TweenMax.fromTo(
+          ".bs-huge-stupid-content",
+          0.2,
+          { opacity: 0, y: 150 },
+          { opacity: 1, y: -150 }
+        )
+      );
+      this.$ksvuescr.$emit("addScene", "scrollIt", scene);
+    }
+  },
+  destroyed() {
+    // Destroy ScrollMagic when our component is removed from DOM
+    this.$ksvuescr.$emit("destroy");
   }
 };
 </script>
@@ -118,4 +146,10 @@ export default {
     opacity: 0.0
   100%
      left: 82%
+
+.bs-huge-stupid-content
+  height: 800px
+  background: tomato
+  &--red
+    background: red
 </style>

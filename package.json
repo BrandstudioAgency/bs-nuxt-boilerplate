@@ -1,11 +1,11 @@
 {
   "name": "test",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Nuxt.js project",
   "author": "Zhumabaev Abzal <abzalzhumabaev@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "HOST=0.0.0.0 PORT=3333 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -14,6 +14,9 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "eslint-import-resolver-nuxt-import": "^0.0.1",
+    "gsap": "^2.0.1",
+    "ks-vue-scrollmagic": "^1.0.2",
     "nuxt": "^1.0.0",
     "nuxt-sass-resources-loader": "^2.0.2"
   },
